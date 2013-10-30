@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Who Wants To Be a Millonaire</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_play">Play</string>
+    <string name="title_activity_scores">Scores</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_credits">Credits</string>
+    <string name="title_activity_scores_tab1">ScoresTab1Activity</string>
+    <string name="title_activity_scores_tab2">ScoresTab2Activity</string>
+    <string name="authors">Author</string>
+    <string name="author1_name">Carlos Escriche Izquierdo</string>
+    <string name="author1_email">caresiz@inf.upv.es</string>
+    <string name="button_add_friend">Add friend</string>
+    <string name="name">Name</string>
+    <string name="helps_number">Number of Grants</string>
+    <string name="tab_local">LOCAL</string>
+    <string name="tab_global">GlOBAL</string>
+    <string name="delete_local_scores">Delete Local Scores</string>
+	<string name="play_for">Play for:</string>
+	<string name="question">Question:</string>
+	
+	<string name="action_phone">Phone</string>
+	<string name="action_50_percent">50%</string>
+	<string name="action_audience">Audience</string>
+	<string name="action_end_game">End game</string>
+	
+	<string-array name="grant_options">
+	    <item>0</item>
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	</string-array>
+	<string name="occupation_name">Occupation</string>
+	<string name="occupation_value">Developer</string>
+	<string name="email_name">Email</string>
+	<string name="app_name_credits">Who Want To Be a Millionaire 1.0</string>
+
+</resources>

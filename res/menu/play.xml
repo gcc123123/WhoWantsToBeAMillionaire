@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_phone"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_phone"/>
+
+    <item
+        android:id="@+id/action_50_percent"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_50_percent" />
+    
+    <item
+        android:id="@+id/action_audience"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_audience"/>
+                
+	<item
+        android:id="@+id/action_end_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_end_game"/>
+
+</menu>
