@@ -30,20 +30,6 @@ public class ScoresTab2Activity extends ListActivity {
 		GetScoresTask getScoresTask = new GetScoresTask(this, this, getParent());
 		getScoresTask.execute(name);
 	}
-	
-	
-	
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
-
-
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
 
 	public void addScores(List<HighScore> list){
 		 highScores.addAll(list);

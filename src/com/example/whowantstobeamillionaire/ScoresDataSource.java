@@ -67,7 +67,7 @@ public class ScoresDataSource {
 		
 		Cursor cursor = database.query(
 				ScoresSQLiteHelper.TABLE_SCORES, allColumns, 
-				null, null, null, null, null);
+				null, null, null, null, ScoresSQLiteHelper.COLUMN_SCORE + " DESC");
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast()){
 			Score score = cursorToScore(cursor);

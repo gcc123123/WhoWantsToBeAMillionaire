@@ -18,10 +18,10 @@ public class HighScore implements Comparable<HighScore>{
 	public int compareTo(HighScore o) {
 		// TODO Auto-generated method stub
 		if (this.getScoring() > o.getScoring()) {
-			return 1;
+			return -1;
 		}
 		else if (this.getScoring() < o.getScoring()) {
-			return -1;
+			return 1;
 		}
 		else {
 			return 0;
