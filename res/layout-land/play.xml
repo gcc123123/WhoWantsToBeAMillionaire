@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewQuestionPrize"
         android:layout_alignBottom="@+id/textViewQuestionPrize"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="50dp"
         android:layout_toRightOf="@+id/textViewQuestionPrize"
         android:text="@string/question"
         android:textSize="15sp" />
@@ -54,22 +54,21 @@
 
     <TextView
         android:id="@+id/textViewQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textView1"
         android:layout_below="@id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:padding="10dp"
-        android:text=""
         android:textSize="20sp" />
 
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewQuestion"
-        
-        android:layout_marginTop="40dp" >
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/textViewQuestionNumber" >
 
         <TableRow
             android:id="@+id/tableRow1"
@@ -133,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="30sp"
         android:text="@string/title_activity_play" />
 

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="30sp"
         android:typeface="normal"
         android:text="@string/title_activity_main"/>
@@ -21,9 +21,10 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
-        android:layout_marginTop="130dp" >
+        android:layout_marginTop="80dp" >
 
         <Button
             android:id="@+id/main_button_play"
