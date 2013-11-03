@@ -9,6 +9,7 @@
     <string name="title_activity_credits">Credits</string>
     <string name="title_activity_scores_tab1">ScoresTab1Activity</string>
     <string name="title_activity_scores_tab2">ScoresTab2Activity</string>
+    <string name="title_activity_end">End</string>
     <string name="authors">Author</string>
     <string name="author1_name">Carlos Escriche Izquierdo</string>
     <string name="author1_email">caresiz@inf.upv.es</string>
@@ -18,23 +19,47 @@
     <string name="tab_local">LOCAL</string>
     <string name="tab_global">GlOBAL</string>
     <string name="delete_local_scores">Delete Local Scores</string>
-	<string name="play_for">Play for:</string>
-	<string name="question">Question:</string>
-	
-	<string name="action_phone">Phone</string>
-	<string name="action_50_percent">50%</string>
-	<string name="action_audience">Audience</string>
-	<string name="action_end_game">End game</string>
-	
-	<string-array name="grant_options">
-	    <item>0</item>
-	    <item>1</item>
-	    <item>2</item>
-	    <item>3</item>
-	</string-array>
-	<string name="occupation_name">Occupation</string>
-	<string name="occupation_value">Developer</string>
-	<string name="email_name">Email</string>
-	<string name="app_name_credits">Who Want To Be a Millionaire 1.0</string>
+    <string name="play_for">Play for:</string>
+    <string name="question">Question:</string>
+    <string name="action_phone">Phone</string>
+    <string name="action_50_percent">50%</string>
+    <string name="action_audience">Audience</string>
+    <string name="action_end_game">End game</string>
+    
+    <string name="end_win">Congratulations, you win!</string>
+    <string name="end_wrong_answer">I\'m sorry, the answer was not correct</string>
+    <string name="end_exit">You have retired</string>
+    <string name="end_score">You won a prize of</string>
+    <string name="end_play_again">Play another Game</string>
+    <string name="end_back_to_main_screen">Back to Main Screen</string>
+    
+    <string name="coin">$</string>
+    
+    <string name="play_iflose">If you fail, you win</string>
+    <string name="play_ifend">If you retire, you win</string>
 
+    <string-array name="grant_options">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="occupation_name">Occupation</string>
+    <string name="occupation_value">Developer</string>
+    <string name="email_name">Email</string>
+    <string name="app_name_credits">Who Want To Be a Millionaire 1.0</string>
+
+    <declare-styleable name="AutoFitTextView">
+        <attr name="minTextSize" format="dimension" />
+        <attr name="maxTextSize" format="dimension" />
+    </declare-styleable>
+    
+    <color name="color_audience">#FF5238d8</color>
+    <color name="color_phone">#FFa238d8</color>
+    <color name="color_button">#FF38ADD8</color>
+    <color name="color_button_pressed">#FF3875D8</color>
+    <color name="color_button_focused">#FF6dadd8</color>
+    <color name="question_correct">#FF7CFC00</color>
+    <color name="question_wrong">#FFFF3030</color>
 </resources>

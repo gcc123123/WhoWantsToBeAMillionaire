@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -9,121 +10,201 @@
     tools:context=".PlayActivity" >
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewQuestionPrizeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewQuestionPrize"
-        android:layout_alignBottom="@+id/textViewQuestionPrize"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/textViewQuestionPrize"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/play_for"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewQuestionPrize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewQuestionPrizeText"
+        android:layout_alignBottom="@+id/textViewQuestionPrizeText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textViewQuestionPrizeText"
+        android:text="1000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewQuestionPrizeCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewQuestionPrize"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/textViewQuestionPrize"
+        android:text="@string/coin" />
+
+    <TextView
+        android:id="@+id/textViewQuestionNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewQuestionPrizeCoin"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/textViewQuestionPrizeCoin"
         android:text="@string/question"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewQuestionNumberText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textViewQuestionNumberText"
+        android:text="15"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewIfLose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textViewQuestionPrizeText"
+        android:layout_below="@id/textViewQuestionPrizeText"
+        android:layout_marginTop="5dp"
+        android:text="@string/play_iflose"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewLosePrize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewIfLose"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textViewIfLose"
+        android:text="1000000"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="28dp"
-        android:textSize="15sp"
-        android:text="@string/play_for" />
+        android:layout_alignBaseline="@id/textViewLosePrize"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/textViewLosePrize"
+        android:text="@string/coin" />
 
     <TextView
-        android:id="@+id/textViewQuestionPrize"
+        android:id="@+id/textViewIfEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text=""
-        android:textSize="20sp" />
+        android:layout_alignLeft="@id/textViewIfLose"
+        android:layout_below="@id/textViewIfLose"
+        android:layout_marginTop="5dp"
+        android:text="@string/play_ifend"
+        android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/textViewQuestionNumber"
+        android:id="@+id/textViewEndPrize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignBaseline="@id/textViewIfEnd"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/textView4"
-        android:text=""
-        android:textSize="20sp" />
+        android:layout_toRightOf="@id/textViewIfEnd"
+        android:text="1000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewEndPrizeCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewEndPrize"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/textViewEndPrize"
+        android:text="@string/coin" />
 
     <TextView
         android:id="@+id/textViewQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView1"
+        android:layout_below="@id/textViewIfEnd"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:padding="10dp"
-        android:text=""
-        android:textSize="20sp" />
+        android:text="gasdgadsgasdfkajsjladsjñgñdlkjgñaksdk"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
         android:layout_below="@+id/textViewQuestion"
-        
-        android:layout_marginTop="40dp" >
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="1dp" >
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <com.example.whowantstobeamillionaire.FontFitTextView
                 android:id="@+id/textViewAnswer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="" />
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_edges"
+                android:text="gadsgdhasdfhfasdfjajdsñgkljñlsakdjgñlkadglasdkgj"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" >
+            android:layout_marginTop="10dp" >
 
-            <TextView
+            <com.example.whowantstobeamillionaire.FontFitTextView
                 android:id="@+id/textViewAnswer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="" />
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_edges"
+                android:text="gadsgdhasdfhfasdfjajdsñgkljñlsakdjgñlkadglasdkgj"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" >
+            android:layout_marginTop="10dp" >
 
-            <TextView
+            <com.example.whowantstobeamillionaire.FontFitTextView
                 android:id="@+id/textViewAnswer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="" />
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_edges"
+                android:text="gadsgdhasdfhfasdfjajdsñgkljñlsakdjgñlkadglasdkgj"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" >
+            android:layout_marginTop="10dp" >
 
-            <TextView
+            <com.example.whowantstobeamillionaire.FontFitTextView
                 android:id="@+id/textViewAnswer4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="" />
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_edges"
+                android:text="gadsgdhasdfhfasdfjajdsñgkljñlsakdjgñlkadglasdkgj"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
         </TableRow>
     </TableLayout>
 

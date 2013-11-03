@@ -9,6 +9,7 @@
     <string name="title_activity_credits">Créditos</string>
     <string name="title_activity_scores_tab1">ScoresTab1Activity</string>
     <string name="title_activity_scores_tab2">ScoresTab2Activity</string>
+    <string name="title_activity_end">Fin</string>
     <string name="authors">Autor</string>
     <string name="author1_name">Carlos Escriche Izquierdo</string>
     <string name="author1_email">caresiz@inf.upv.es</string>
@@ -21,17 +22,23 @@
 	<string name="play_for">Jugar por:</string>
 	<string name="question">Pregunta:</string>
 	
+	<string name="end_win">¡Felicidades, has ganado!</string>
+    <string name="end_wrong_answer">Lo siento, la respuesta no ha sido correcta</string>
+    <string name="end_exit">Te has retirado</string>
+    <string name="end_score">Has obtenido un premio de</string>
+    <string name="end_play_again">Jugar otra Partida</string>
+    <string name="end_back_to_main_screen">Volver al Menú Principal</string>
+    
+    <string name="coin">€</string>
+    
+    <string name="play_iflose">Si fallas, ganas</string>
+    <string name="play_ifend">Si te retiras, ganas</string>
+	
 	<string name="action_phone">Llamada</string>
 	<string name="action_50_percent">50%</string>
 	<string name="action_audience">Audiencia</string>
 	<string name="action_end_game">Terminar Juego</string>
 	
-	<string-array name="grant_options">
-	    <item>0</item>
-	    <item>1</item>
-	    <item>2</item>
-	    <item>3</item>
-	</string-array>
 	<string name="occupation_name">Ocupación</string>
 	<string name="occupation_value">Desarrollador</string>
 	<string name="email_name">Email</string>

@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 
 import android.app.Activity;
 import android.content.Context;
@@ -41,7 +42,6 @@ public class GetScoresTask extends AsyncTask<String, Integer, Boolean> {
 	Activity parent;
 	
 	public GetScoresTask(Context context, ScoresTab2Activity a, Activity parent) {
-		// TODO Auto-generated constructor stub
 		this.context = context;
 		this.activity = a;
 		this.parent = parent;
@@ -49,13 +49,13 @@ public class GetScoresTask extends AsyncTask<String, Integer, Boolean> {
 	
 	@Override
 	protected void onPostExecute(Boolean result) {
-		// TODO Auto-generated method stub
 		super.onPostExecute(result);
 		
 		parent.setProgressBarIndeterminate(false); 
 		parent.setProgressBarIndeterminateVisibility(false);
 		
-		if(result == true){
+		if(result == true && highScoreList != null){
+
 			List<HighScore> highScores = highScoreList.getScores();
 			Collections.sort(highScores);
 			activity.addScores(highScores);
@@ -73,7 +73,6 @@ public class GetScoresTask extends AsyncTask<String, Integer, Boolean> {
 
 	@Override
 	protected void onPreExecute() {
-		// TODO Auto-generated method stub
 		super.onPreExecute();
 		parent.setProgressBarIndeterminate(true); 
 		parent.setProgressBarIndeterminateVisibility(true);
@@ -81,14 +80,11 @@ public class GetScoresTask extends AsyncTask<String, Integer, Boolean> {
 
 	@Override
 	protected void onProgressUpdate(Integer... values) {
-		// TODO Auto-generated method stub
 		super.onProgressUpdate(values);
 	}
 
 	@Override
 	protected Boolean doInBackground(String... params) {
-		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
 		HttpClient client= new DefaultHttpClient();
 		List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 		String name = params[0];
@@ -121,18 +117,17 @@ public class GetScoresTask extends AsyncTask<String, Integer, Boolean> {
 			}
 			
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return false;
 		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return false;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return false;
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return false;
+		} catch (JsonSyntaxException e){
+			return false;
 		}
+		
 		return true;
 	}
 	

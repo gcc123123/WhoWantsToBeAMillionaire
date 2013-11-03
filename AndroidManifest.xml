@@ -6,14 +6,16 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="com.example.whowantstobeamillionaire.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:name="App">
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.whowantstobeamillionaire.MainActivity"
             android:label="@string/app_name" >
@@ -46,6 +48,10 @@
         <activity
             android:name="com.example.whowantstobeamillionaire.PlayActivity"
             android:label="@string/title_activity_play" >
+        </activity>
+        <activity
+            android:name="com.example.whowantstobeamillionaire.EndActivity"
+            android:label="@string/title_activity_end" >
         </activity>
     </application>
 

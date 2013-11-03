@@ -9,7 +9,7 @@
     tools:context=".SettingsActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewQuestionPrizeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/textViewQuestionPrizeText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" >
 
@@ -56,7 +56,7 @@
             android:layout_marginTop="20dp" >
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textViewPrize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/helps_number"
@@ -79,7 +79,8 @@
                 android:id="@+id/settings_button_addfriend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_add_friend" />
+                android:text="@string/button_add_friend"
+                android:background="@drawable/button_background_selector" />
 
             <EditText
                 android:id="@+id/settings_edittext_addfriend"

@@ -36,7 +36,8 @@
                 android:id="@+id/main_button_play"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:text="@string/title_activity_play" />
+                android:text="@string/title_activity_play"
+                android:background="@drawable/button_background_selector" />
 
         </TableRow>
 
@@ -50,7 +51,8 @@
                 android:id="@+id/main_button_scores"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:text="@string/title_activity_scores" />
+                android:text="@string/title_activity_scores"
+                android:background="@drawable/button_background_selector" />
 
         </TableRow>
 
@@ -64,8 +66,8 @@
                 android:id="@+id/main_button_settings"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-
-                android:text="@string/title_activity_settings" />
+                android:text="@string/title_activity_settings"
+                android:background="@drawable/button_background_selector" />
 
         </TableRow>
     </TableLayout>

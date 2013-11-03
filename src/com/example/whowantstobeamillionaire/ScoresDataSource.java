@@ -1,8 +1,6 @@
 package com.example.whowantstobeamillionaire;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -62,8 +60,8 @@ public class ScoresDataSource {
 		database.delete(ScoresSQLiteHelper.TABLE_SCORES, null, null);
 	}
 	
-	public List<Score> getAllScores(){
-		List<Score> scores = new ArrayList<Score>();
+	public ArrayList<Score> getAllScores(){
+		ArrayList<Score> scores = new ArrayList<Score>();
 		
 		Cursor cursor = database.query(
 				ScoresSQLiteHelper.TABLE_SCORES, allColumns, 

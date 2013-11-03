@@ -9,7 +9,7 @@
     tools:context=".CreditsActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewQuestionPrizeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/textViewQuestionPrizeText"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="40dp"
@@ -42,7 +42,7 @@
             android:layout_marginTop="20dp" >
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textViewEndPrize"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -68,7 +68,7 @@
                 android:text="@string/occupation_name" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textViewIfEnd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -87,7 +87,7 @@
                 android:text="@string/email_name" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textViewLosePrize"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"

@@ -1,8 +1,7 @@
 package com.example.whowantstobeamillionaire;
 
-import java.util.List;
+import java.util.ArrayList;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.app.ListActivity;
 
 public class ScoresTab1Activity extends ListActivity {
@@ -16,9 +15,11 @@ public class ScoresTab1Activity extends ListActivity {
 		App appState = (App) this.getApplication();
 		localStorage = appState.getDatabase();
 		localStorage.open();
-		List<Score> values = localStorage.getAllScores();
+		ArrayList<Score> values = localStorage.getAllScores();
 		
-		setListAdapter(new ArrayAdapter<Score>(this, R.layout.scores_tab1, values));
+		ScoreAdapter adapter = new ScoreAdapter(ScoresTab1Activity.this, values);
+		
+		setListAdapter(adapter);
 	}
 	
 	public String[] generateScores(){

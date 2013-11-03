@@ -17,6 +17,10 @@ import android.content.SharedPreferences.Editor;
 
 public class SettingsActivity extends Activity implements OnItemSelectedListener{
 
+	public final static String GRANTS = "grants";
+	public final static String USERNAME = "username";
+	public final static String SETTINGS_FILE = "settings";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,8 +39,8 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 			@Override
 			public void onClick(View v) {
 				SharedPreferences preferences = 
-				getSharedPreferences("settings", Context.MODE_PRIVATE);
-				String name = preferences.getString("username", null);
+				getSharedPreferences(SettingsActivity.SETTINGS_FILE, Context.MODE_PRIVATE);
+				String name = preferences.getString(SettingsActivity.USERNAME, null);
 				EditText editText = (EditText) findViewById(R.id.settings_edittext_addfriend);
 				String friend = editText.getText().toString();
 				if(name != null && !name.contentEquals("") && friend != null && !friend.contentEquals("")){
@@ -46,24 +50,9 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 			}
 		});
 	}
-
-	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
-		// TODO Auto-generated method stub
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-	}
-
-	@Override
-	public void onNothingSelected(AdapterView<?> arg0) {
-		// TODO Auto-generated method stub
-	    // Another interface callback
-	}
 	
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
 		super.onPause();
 		
 		saveData();
@@ -71,7 +60,6 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		
 		restoreData();
@@ -80,26 +68,39 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	
 	private void restoreData(){
 		SharedPreferences preferences = 
-				getSharedPreferences("settings", Context.MODE_PRIVATE);
+				getSharedPreferences(SETTINGS_FILE, Context.MODE_PRIVATE);
 		EditText text = (EditText) findViewById(R.id.editText1);
-		text.setText(preferences.getString("username", "No se ha encontrado"));	
+		text.setText(preferences.getString(USERNAME, "No se ha encontrado"));	
 		
 		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-		spinner.setSelection(preferences.getInt("helps", 0));
+		spinner.setSelection(preferences.getInt(GRANTS, 0));
 	}
 	
 	private void saveData(){
 		SharedPreferences preferences =
-				getSharedPreferences("settings", Context.MODE_PRIVATE);
+				getSharedPreferences(SETTINGS_FILE, Context.MODE_PRIVATE);
 		
 		Editor editor = preferences.edit();
 		
 		EditText text = (EditText) findViewById(R.id.editText1);
-		editor.putString("username", text.getText().toString());
+		editor.putString(USERNAME, text.getText().toString());
 		
 		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-		editor.putInt("helps", spinner.getSelectedItemPosition());
+		editor.putInt(GRANTS, spinner.getSelectedItemPosition());
 		
 		editor.commit();
+	}
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }

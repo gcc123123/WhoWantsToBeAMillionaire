@@ -37,7 +37,7 @@
         number="3"
         phone="3"
         right="3"
-        text="¿Cual es el tercer libro en la serir Pokemon?" />
+        text="¿Cual es el tercer libro en la serie Pokemon?" />
 
     <question
         answer1="El rey Juan"
@@ -180,7 +180,7 @@
         number="14"
         phone="4"
         right="4"
-        text="¿Dónde se celbraron los primeros juegos olímpicos de invierno?" />
+        text="¿Dónde se celebraron los primeros juegos olímpicos de invierno?" />
 
     <question
         answer1="Brooklyn-Battery"
